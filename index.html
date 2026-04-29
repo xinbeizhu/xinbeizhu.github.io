@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xinbei Zhu | Personal Website</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --card: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --accent: #5b6f8f;
+      --accent-light: #e8edf5;
+      --border: #e5e5e5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .hero-card,
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 42px;
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+
+    .profile-box {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      font-size: 42px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      font-size: 14px;
+    }
+
+    .button.secondary {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 26px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .item {
+      margin-bottom: 24px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 3px 0 8px;
+    }
+
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill {
+      background: #f2f2f2;
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 24px 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .hero,
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Xinbei Zhu</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <div class="hero-card">
+        <h1>Xinbei Zhu</h1>
+        <div class="subtitle">M.S. Student in Computer Science at Virginia Tech</div>
+        <p>
+          I am a master's student in Computer Science at Virginia Tech. My current thesis studies variants of the Mean King Problem in quantum information. My broader research interests include Human-Centered AI, Explainable AI, Human-AI Interaction, Medical AI, Computer Vision, HCI, and Quantum Machine Learning.
+        </p>
+        <div class="button-row">
+          <a class="button" href="mailto:zhuhelen56@gmail.com">Email Me</a>
+          <a class="button secondary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/xinbeizhu" target="_blank">GitHub</a>
+          <a class="button secondary" href="cv_Helen_XinbeiZhu.pdf" target="_blank">CV</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Human-Centered AI</span>
+          <span class="tag">Explainable AI</span>
+          <span class="tag">Medical AI</span>
+          <span class="tag">Computer Vision</span>
+          <span class="tag">Quantum Information</span>
+        </div>
+      </div>
+
+      <div class="hero-card profile-box">
+        <div class="avatar">XZ</div>
+        <h3>Research Interests</h3>
+        <p class="meta">HCI · XAI · Medical AI · Computer Vision · Quantum Machine Learning</p>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am interested in building AI systems that are understandable, useful, and reliable for people. My current work focuses on quantum information theory, while my future research interests connect human-centered AI, explainable AI, medical AI, computer vision, and interactive systems.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item">
+        <h3>M.S. in Computer Science</h3>
+        <div class="meta">Virginia Tech · Expected Spring 2026 · GPA: 4.0/4.0</div>
+        <p>Quantum Computing Track. Thesis: <em>Four Variants of the Mean King Problem</em>.</p>
+      </div>
+      <div class="item">
+        <h3>B.S. in Computer Science</h3>
+        <div class="meta">Virginia Tech · August 2019 – May 2023 · GPA: 3.54/4.0</div>
+        <p>Minor in Mathematics.</p>
+      </div>
+      <div class="item">
+        <h3>B.S. in Computational Modeling & Data Analytics</h3>
+        <div class="meta">Virginia Tech · August 2019 – May 2023 · GPA: 3.54/4.0</div>
+        <p>Minor in Mathematics.</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Experience</h2>
+      <div class="item">
+        <h3>The Mean King Problem in Quantum Information</h3>
+        <div class="meta">Master's Thesis · Supervisor: Dr. Jamie Sikora · April 2024 – Present</div>
+        <ul>
+          <li>Study new interactive and non-interactive variants of the Mean King Problem.</li>
+          <li>Compare average-case and worst-case success probabilities across different game settings.</li>
+          <li>Formulate optimization problems as semidefinite programs and solve them using MATLAB/CVX.</li>
+          <li>Analyze how different measurement bases affect optimal guessing strategies.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="item">
+        <h3>Visual Analytics for Interpreting Classification Effects on BERT Representations in Medical Literature</h3>
+        <div class="meta">Course Project · August 2024 – December 2024 · Python, Observable, JavaScript</div>
+        <ul>
+          <li>Built interactive visualizations to compare BERT embedding spaces before and after classification.</li>
+          <li>Used nearest-neighbor exploration and word-frequency analysis to explain local semantic patterns.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Robustness of Fawkes Facial Privacy Protection against AI Denoising</h3>
+        <div class="meta">Course Project · August 2023 – December 2023 · Python</div>
+        <ul>
+          <li>Evaluated how denoising models affect the strength of Fawkes facial privacy cloaks.</li>
+          <li>Showed that denoising can restore identifiable facial features and weaken privacy protection.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Parcel Damage Classification</h3>
+        <div class="meta">Course Project · January 2023 – May 2023 · Python, JavaScript, React, Node.js</div>
+        <ul>
+          <li>Built a computer-vision pipeline using VGG, YOLOv5, and Transformer-based models.</li>
+          <li>Developed a full-stack web application to run inference and visualize results.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+      <div class="item">
+        <h3>Graduate Teaching Assistant — Data Structures & Software Design</h3>
+        <div class="meta">Virginia Tech · August 2025 – Present</div>
+        <ul>
+          <li>Support approximately 450 students in Java-based OOP, algorithms, and performance analysis.</li>
+          <li>Lead labs and office hours, create debugging guides, and provide targeted feedback.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Graduate Teaching Assistant — Machine Learning</h3>
+        <div class="meta">Virginia Tech · January 2025 – May 2025</div>
+        <ul>
+          <li>Mentored approximately 50 students in machine learning concepts, model evaluation, and Python implementation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="grid-two">
+      <section id="publications">
+        <h2>Publications</h2>
+        <div class="item">
+          <h3>Robust Optimal Subsampling Based on Weighted Asymmetric Least Squares</h3>
+          <div class="meta">Statistical Papers, Springer · September 2023</div>
+          <p>Min Ren, Shengli Zhao, Xinbei Zhu, Mingqiu Wang</p>
+          <p>DOI: 10.1007/s00362-023-01480-7</p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+          <span class="skill">Python</span>
+          <span class="skill">Java</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">C++</span>
+          <span class="skill">SQL</span>
+          <span class="skill">MATLAB</span>
+          <span class="skill">PyTorch</span>
+          <span class="skill">scikit-learn</span>
+          <span class="skill">BERT</span>
+          <span class="skill">D3.js</span>
+          <span class="skill">Observable</span>
+          <span class="skill">Git</span>
+          <span class="skill">Docker</span>
+        </div>
+      </section>
+    </div>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:zhuhelen56@gmail.com">zhuhelen56@gmail.com</a><br />
+        GitHub: <a href="https://github.com/xinbeizhu" target="_blank">github.com/xinbeizhu</a><br />
+        LinkedIn: <a href="https://www.linkedin.com/" target="_blank">LinkedIn Profile</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Xinbei Zhu. Built with GitHub Pages.
+  </footer>
+</body>
+</html>
